@@ -63,8 +63,6 @@ router.post(
         },
       };
 
-      console.log(user.id);
-
       const token = await jwt.sign(
         payload,
         config.get('jwtSecret'),
