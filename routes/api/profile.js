@@ -7,7 +7,7 @@ const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
-const { response } = require('express');
+const Post = require('../../models/Post');
 
 // @route GET api/profile/me
 // @desc Get current user's profile
@@ -23,7 +23,6 @@ router.get('/me', auth, async (req, res) => {
     }
 
     return res.json(profile);
-
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server error');
@@ -152,8 +151,8 @@ router.get('/user/:user_id', async (req, res) => {
 // @access Private
 router.delete('/', auth, async (req, res) => {
   try {
-    // @todo - remove user's posts
-
+    // Remove user posts
+    await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
