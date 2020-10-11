@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { header } from 'express-validator';
 
 const setAuthToken = token => {
   if(token) {

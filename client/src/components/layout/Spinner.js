@@ -1,4 +1,4 @@
-import React, { Fragment, Freagment } from 'react';
+import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
 
 export default () => {
