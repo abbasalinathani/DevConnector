@@ -1,0 +1,7 @@
+{
+  "mongoURI": "mongodb+srv://abbasalinathani:8v2QnKYmWTSDZlRC@devconnector.oradp.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mySecretToken",
+  "githubClientId": "4e104018985933221389",
+  "githubSecret": "1c3316f1f2d3bd1cf78a644a456e3b0ff9c8fe2e",
+  "accessToken": "f47d5827dfe73961e816be099c58f2ab1793548e"
+}
